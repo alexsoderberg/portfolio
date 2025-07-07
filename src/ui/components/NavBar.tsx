@@ -1,6 +1,12 @@
+import type { JSX } from "react"
 import { NavLink } from "react-router-dom"
 
-const NavBar = () => {
+/**
+ * A main nav bar containting links to sub pages. 
+ *
+ * @returns {JSX.Element} - A navbar containing links
+ */
+const NavBar = (): JSX.Element => {
   return (
     <nav>
       <ul className='flex justify-end gap-20 list-none'>

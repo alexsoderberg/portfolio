@@ -1,8 +1,8 @@
 import './App.css'
 import { Routes, Route } from 'react-router';
-import HomePage from './ui/HomePage';
-import AboutPage from './ui/AboutPage';
-import Layout from './ui/Layout';
+import HomePage from './ui/page/HomePage';
+import AboutPage from './ui/page/AboutPage';
+import Layout from './ui/components/Layout';
 
 function App() {
   return (
