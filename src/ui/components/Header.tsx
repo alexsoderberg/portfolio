@@ -8,8 +8,8 @@ import NavBar from "./NavBar"
  */
 const Header = (): JSX.Element => {
   return (
-    <div className="flex justify-between">
-      <p>Header</p>
+    <div className="flex justify-between p-5 mx-50">
+      <h1 className="text-2xl">Alex Söderberg</h1>
       <NavBar />
     </div>
   )

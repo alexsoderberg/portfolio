@@ -9,7 +9,7 @@ import Header from "./Header"
  */
 const Layout = (): JSX.Element => {
   return (
-    <div className="w-full p-5">
+    <div className="w-full bg-background bg-linear-to-br from-background to-secondary text-light from-background to-secondary">
       <Header />
       <main>
         <Outlet />
