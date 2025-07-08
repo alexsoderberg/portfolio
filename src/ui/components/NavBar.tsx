@@ -1,5 +1,6 @@
 import type { JSX } from "react"
-import { NavLink } from "react-router-dom"
+import { HashLink } from "react-router-hash-link"
+
 
 /**
  * A main nav bar containting links to sub pages. 
@@ -10,10 +11,18 @@ const NavBar = (): JSX.Element => {
   return (
     <nav>
       <ul className='flex justify-end gap-20 list-none'>
-        <NavLink to="/">Start</NavLink>
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="#">Dig</NavLink>
-        <NavLink to="#">Igen</NavLink>
+        <li>
+          <HashLink to="/" smooth>Start</HashLink>
+        </li>
+        <li>
+          <HashLink to="/#about" smooth>About</HashLink>
+        </li>
+        <li>
+          <HashLink to="/" smooth>Dig</HashLink>
+        </li>
+        <li>
+          <HashLink to="/#contact" smooth>Contact</HashLink>
+        </li>
       </ul>
     </nav>
   )

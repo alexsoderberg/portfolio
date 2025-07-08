@@ -1,8 +1,6 @@
 const Portrait = () => {
   return (
-    <>
-      <img className={`w-50 h-50`} src="src\assets\portrait.png" alt="Portrait picture" />
-    </>
+    <img className="max-w-100 rounded-full bg-white" src="src\assets\portrait-no-bg.png" alt="Portrait picture" />
   )
 }
 
