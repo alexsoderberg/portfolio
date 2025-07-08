@@ -18,9 +18,6 @@ const NavBar = (): JSX.Element => {
           <HashLink to="/#about" smooth>About</HashLink>
         </li>
         <li>
-          <HashLink to="/" smooth>Dig</HashLink>
-        </li>
-        <li>
           <HashLink to="/#contact" smooth>Contact</HashLink>
         </li>
       </ul>
