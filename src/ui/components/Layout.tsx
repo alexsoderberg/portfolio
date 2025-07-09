@@ -9,11 +9,13 @@ import Header from "./Header"
  */
 const Layout = (): JSX.Element => {
   return (
-    <div className="w-full bg-background bg-linear-to-br from-background to-secondary text-light from-background to-secondary">
-      <Header />
-      <main>
-        <Outlet />
-      </main>
+    <div className="flex flex-col items-center bg-background bg-linear-to-br from-background to-secondary text-light font-roboto from-background to-secondary">
+      <div className="flex flex-col items-center max-w-80/100">
+        <Header />
+        <main className="max-w-full">
+          <Outlet />
+        </main>
+      </div>
     </div>
   )
 }
