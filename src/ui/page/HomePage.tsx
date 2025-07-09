@@ -10,21 +10,19 @@ import AboutSection from "../sections/AboutSection"
  */
 const HomePage = (): JSX.Element => {
   return (
-    <>
-      <main className="flex flex-col gap-10">
-        <section className="flex justify-center flex-col min-h-screen items-center gap-10 md:flex-row">
-          <p>
-            Fullstack-utvecklare med fokus på backend. Jag försöker ständigt förbättra kunskaper inom DevOps, Frontend och Backend.
-          </p>
-          <Portrait />
-        </section>
+    <div className="flex flex-col gap-10">
+      <section className="flex justify-center flex-col min-h-screen items-center gap-10 md:flex-row">
+        <p>
+          Fullstack-utvecklare med fokus på backend. Jag försöker ständigt förbättra kunskaper inom DevOps, Frontend och Backend.
+        </p>
+        <Portrait />
+      </section>
 
-        <AboutSection />
+      <AboutSection />
 
 
-        <Contact />
-      </main>
-    </>
+      <Contact />
+    </div>
   )
 }
 
