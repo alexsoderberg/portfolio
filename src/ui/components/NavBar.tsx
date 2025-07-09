@@ -20,6 +20,7 @@ const NavBar = (): JSX.Element => {
       <ul className="hidden md:flex justify-end gap-10 list-none">
         <li><HashLink to="/" smooth>Start</HashLink></li>
         <li><HashLink to="/#about" smooth>About</HashLink></li>
+        <li><HashLink to="/#projects" smooth>Projects</HashLink></li>
         <li><HashLink to="/#contact" smooth>Contact</HashLink></li>
       </ul>
 
@@ -49,6 +50,7 @@ const NavBar = (): JSX.Element => {
         <ul className="md:hidden mt-4 flex flex-col gap-4 list-none text-right">
           <li><HashLink to="/" smooth onClick={() => setIsOpen(false)}>Start</HashLink></li>
           <li><HashLink to="/#about" smooth onClick={() => setIsOpen(false)}>About</HashLink></li>
+          <li><HashLink to="/#projects" smooth onClick={() => setIsOpen(false)}>Projects</HashLink></li>
           <li><HashLink to="/#contact" smooth onClick={() => setIsOpen(false)}>Contact</HashLink></li>
         </ul>
       )}

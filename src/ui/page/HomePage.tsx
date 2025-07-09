@@ -2,6 +2,7 @@ import type { JSX } from "react"
 import Portrait from "../components/Portrait"
 import Contact from "../sections/ContactSection"
 import AboutSection from "../sections/AboutSection"
+import ProjectSection from "../sections/ProjectSection"
 
 /**
  * The starting page for the application.
@@ -19,6 +20,7 @@ const HomePage = (): JSX.Element => {
       </section>
 
       <AboutSection />
+      <ProjectSection />
 
 
       <Contact />
