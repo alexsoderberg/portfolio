@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Quicksand:wght@300..700&family=Square+Peg&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -5,6 +6,8 @@
   --color-primary: #1B4242;
   --color-secondary: #5C8374;
   --color-light: #9EC8B9;
+  --color-text: #d6f4ea;
+  --font-quicksand: "Quicksand", sans-serif;
 
   --font-roboto: "Roboto", sans-serif;
 }
