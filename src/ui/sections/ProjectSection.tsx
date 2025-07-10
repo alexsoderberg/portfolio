@@ -2,15 +2,15 @@ import ProjectCard from "../components/ProjectCard"
 
 const ProjectSection = () => {
   return (
-    <section id="projects" className="flex items-center flex-col">
+    <section id="projects" className="min-h-100 flex items-center flex-col gap-20">
       <h1 className="text-2xl">Projects</h1>
-      <ul className="flex">
-        <li>
-          <ProjectCard title={"Continuous Improvement Platform"} imgUrl={"https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=1800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} imgAlt={"pic"}/>
-        </li>
-        <li>Movies REST API</li>
-        <li></li>
-      </ul>
+      <div className="flex items-center gap-10 justify-center flex-wrap">
+        <ProjectCard title={"Continuous Improvement Platform"} imgUrl={"https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=1800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} imgAlt={"pic"} />
+
+        <ProjectCard title={"Movies REST API"} imgUrl={"https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=1800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} imgAlt={"pic"} />
+
+        <ProjectCard title={"Continuous Improvement Platform"} imgUrl={"https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=1800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} imgAlt={"pic"} />
+      </div>
     </section>
   )
 }
