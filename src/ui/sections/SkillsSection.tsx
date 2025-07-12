@@ -1,0 +1,65 @@
+import SkillTag from "../components/SkillTag"
+
+const SkillsSection = () => {
+  const frontEndSkills: string[] = ["HTML", "CSS", "JavaScript", "TypeScript", "React", "MaterialUI", "Tailwind"]
+  const backEndSkills: string[] = ["Java", "Spring Boot", "Node", "Express", "MongoDB", "PostgreSQL"]
+  const otherSkills: string[] = ["Git", "Docker", "OOP", "Agile", "TDD", "JUnit", "Jest"]
+
+  return (
+    <div className="flex flex-col gap-10">
+      <h2 className="text-2xl sm:text-5xl text-center">Verktyg & erfarenheter</h2>
+      <div className="flex flex-col gap-2">
+        <h3 className="text-xl">
+          Front End
+        </h3>
+        <div>
+          <ul className="flex flex-wrap gap-2">
+            {frontEndSkills.map((skill) => {
+              return (
+                <li>
+                  <SkillTag skill={skill} />
+                </li>
+              )
+            })}
+          </ul>
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-2">
+        <h3 className="text-xl">
+          Back End
+        </h3>
+        <div>
+          <ul className="flex flex-wrap gap-2">
+            {backEndSkills.map((skill) => {
+              return (
+                <li>
+                  <SkillTag skill={skill} />
+                </li>
+              )
+            })}
+          </ul>
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-2">
+        <h3 className="text-xl">
+          Other
+        </h3>
+        <div>
+          <ul className="flex flex-wrap gap-2">
+            {otherSkills.map((skill) => {
+              return (
+                <li>
+                  <SkillTag skill={skill} />
+                </li>
+              )
+            })}
+          </ul>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default SkillsSection
