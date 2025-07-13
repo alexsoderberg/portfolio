@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path='/' element={<Layout setLanguage={setCurrentLanguage}/>}>
+        <Route path='/' element={<Layout language={currentLanguage} setLanguage={setCurrentLanguage}/>}>
           <Route index element={<HomePage language={currentLanguage}/>} />
         </Route>
       </Routes>

@@ -4,6 +4,7 @@ import Header from "./Header"
 import type { Languages } from "../../data/Languages"
 
 interface LayoutProps {
+  language: Languages
   setLanguage: (language: Languages) => void
 }
 
@@ -12,11 +13,11 @@ interface LayoutProps {
  *
  * @returns {JSX.Element} - A layout containing header and page content.
  */
-const Layout = ({setLanguage}: LayoutProps): JSX.Element => {
+const Layout = ({language, setLanguage}: LayoutProps): JSX.Element => {
   return (
     <div className="flex flex-col items-center bg-background bg-linear-to-br from-secondary to-background text-text font-quicksand pb-15">
       <div className="flex flex-col items-center max-w-80/100">
-        <Header setLanguage={setLanguage}/>
+        <Header language={language} setLanguage={setLanguage}/>
         <main className="max-w-full">
           <Outlet />
         </main>
