@@ -2,9 +2,11 @@ import { useState } from "react"
 import { HashLink } from "react-router-hash-link"
 import type { JSX } from "react"
 import { Languages } from "../../data/Languages"
+import LanguageToggle from "./LanguageToggle"
 
 interface NavBarProps {
   language: Languages
+  setLanguage: (lanugage: Languages) => void
 }
 
 /**
@@ -12,7 +14,7 @@ interface NavBarProps {
  *
  * @returns {JSX.Element} - A navbar containing links
  */
-const NavBar = ({ language }: NavBarProps): JSX.Element => {
+const NavBar = ({ language, setLanguage }: NavBarProps): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleMenu = () => {
@@ -27,6 +29,7 @@ const NavBar = ({ language }: NavBarProps): JSX.Element => {
         <li><HashLink to="/#about" smooth>{language === Languages.SWEDISH ? "Om" : "About"}</HashLink></li>
         <li><HashLink to="/#projects" smooth>{language === Languages.SWEDISH ? "Projekt" : "Projects"}</HashLink></li>
         <li><HashLink to="/#contact" smooth>{language === Languages.SWEDISH ? "Kontakt" : "Contact"}</HashLink></li>
+        <li><LanguageToggle setCurrentLanguage={setLanguage} /></li>
       </ul>
 
       {/* Mobile hamburger icon */}
@@ -49,11 +52,12 @@ const NavBar = ({ language }: NavBarProps): JSX.Element => {
 
       {/* Mobile menu */}
       {isOpen && (
-        <ul className="md:hidden mt-4 flex flex-col gap-4 list-none text-right">
+        <ul className="md:hidden mt-4 flex flex-col gap-4 list-none text-right ">
           <li><HashLink to="/" smooth onClick={() => setIsOpen(false)}>Start</HashLink></li>
           <li><HashLink to="/#about" smooth onClick={() => setIsOpen(false)}>{language === Languages.SWEDISH ? "Om" : "About"}</HashLink></li>
           <li><HashLink to="/#projects" smooth onClick={() => setIsOpen(false)}>{language === Languages.SWEDISH ? "Projekt" : "Projects"}</HashLink></li>
           <li><HashLink to="/#contact" smooth onClick={() => setIsOpen(false)}>{language === Languages.SWEDISH ? "Kontakt" : "Contact"}</HashLink></li>
+          <li><LanguageToggle setCurrentLanguage={setLanguage} /></li>
         </ul>
       )}
     </nav>

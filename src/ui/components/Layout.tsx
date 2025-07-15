@@ -16,7 +16,7 @@ interface LayoutProps {
 const Layout = ({language, setLanguage}: LayoutProps): JSX.Element => {
   return (
     <div className="flex flex-col items-center bg-background bg-linear-to-br from-secondary to-background text-text font-quicksand pb-15">
-      <div className="flex flex-col items-center max-w-80/100">
+      <div className="flex flex-col items-center p-5">
         <Header language={language} setLanguage={setLanguage}/>
         <main className="max-w-full">
           <Outlet />
