@@ -1,11 +1,10 @@
 import { Languages } from "../../data/Languages"
+import useLanguage from "../../hooks/useLanguage"
 import SkillTag from "../components/SkillTag"
 
-interface SkillsSectionProps {
-  language: Languages
-}
+const SkillsSection = () => {
+  const { language } = useLanguage()
 
-const SkillsSection = ({language}: SkillsSectionProps) => {
   const frontEndSkills: string[] = ["HTML", "CSS", "JavaScript", "TypeScript", "React", "MaterialUI", "Tailwind"]
   const backEndSkills: string[] = ["Java", "Spring Boot", "Node", "Express", "MongoDB", "PostgreSQL"]
   const otherSkills: string[] = ["Git", "Docker", "OOP", "Agile", "TDD", "JUnit", "Jest"]

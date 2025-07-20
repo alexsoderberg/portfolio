@@ -1,11 +1,10 @@
 import { Languages } from "../../data/Languages"
+import useLanguage from "../../hooks/useLanguage"
 import ProjectCard from "../components/ProjectCard"
 
-interface ProjectSectionProps {
-  language: Languages
-}
+const ProjectSection = () => {
+  const { language } = useLanguage()
 
-const ProjectSection = ({language}: ProjectSectionProps) => {
   return (
     <section id="projects" className="min-h-100 flex items-center flex-col gap-20">
       <h1 className="text-5xl">{language === Languages.SWEDISH ? "Projekt" : "Projects"}</h1>

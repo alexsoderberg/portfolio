@@ -1,11 +1,10 @@
 import type { JSX } from "react"
 import { Languages } from "../../data/Languages"
+import useLanguage from "../../hooks/useLanguage"
 
-interface AboutSectionProps {
-  language: Languages
-}
+const AboutSection = (): JSX.Element => {
+  const { language } = useLanguage()
 
-const AboutSection = ({ language }: AboutSectionProps): JSX.Element => {
   return (
     <section id="about" className="flex flex-col justify-center items-center gap-20 min-h-screen">
       <h1 className="text-5xl">About</h1>
@@ -40,13 +39,7 @@ const AboutSection = ({ language }: AboutSectionProps): JSX.Element => {
             </p>
           </div>
         </div>
-
-
       </div>
-
-
-
-
     </section>
   )
 }

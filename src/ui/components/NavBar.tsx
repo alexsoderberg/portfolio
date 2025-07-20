@@ -3,18 +3,15 @@ import { HashLink } from "react-router-hash-link"
 import type { JSX } from "react"
 import { Languages } from "../../data/Languages"
 import LanguageToggle from "./LanguageToggle"
-
-interface NavBarProps {
-  language: Languages
-  setLanguage: (lanugage: Languages) => void
-}
+import useLanguage from "../../hooks/useLanguage"
 
 /**
  * A main nav bar containting links to sub pages. 
  *
  * @returns {JSX.Element} - A navbar containing links
  */
-const NavBar = ({ language, setLanguage }: NavBarProps): JSX.Element => {
+const NavBar = (): JSX.Element => {
+  const { language } = useLanguage();
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleMenu = () => {
@@ -29,7 +26,7 @@ const NavBar = ({ language, setLanguage }: NavBarProps): JSX.Element => {
         <li><HashLink to="/#about" smooth>{language === Languages.SWEDISH ? "Om" : "About"}</HashLink></li>
         <li><HashLink to="/#projects" smooth>{language === Languages.SWEDISH ? "Projekt" : "Projects"}</HashLink></li>
         <li><HashLink to="/#contact" smooth>{language === Languages.SWEDISH ? "Kontakt" : "Contact"}</HashLink></li>
-        <li><LanguageToggle setCurrentLanguage={setLanguage} /></li>
+        <li><LanguageToggle /></li>
       </ul>
 
       {/* Mobile hamburger icon */}
@@ -57,7 +54,7 @@ const NavBar = ({ language, setLanguage }: NavBarProps): JSX.Element => {
           <li><HashLink to="/#about" smooth onClick={() => setIsOpen(false)}>{language === Languages.SWEDISH ? "Om" : "About"}</HashLink></li>
           <li><HashLink to="/#projects" smooth onClick={() => setIsOpen(false)}>{language === Languages.SWEDISH ? "Projekt" : "Projects"}</HashLink></li>
           <li><HashLink to="/#contact" smooth onClick={() => setIsOpen(false)}>{language === Languages.SWEDISH ? "Kontakt" : "Contact"}</HashLink></li>
-          <li><LanguageToggle setCurrentLanguage={setLanguage} /></li>
+          <li><LanguageToggle /></li>
         </ul>
       )}
     </nav>

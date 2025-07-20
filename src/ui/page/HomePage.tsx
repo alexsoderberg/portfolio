@@ -5,17 +5,16 @@ import AboutSection from "../sections/AboutSection"
 import ProjectSection from "../sections/ProjectSection"
 import SkillsSection from "../sections/SkillsSection"
 import { Languages } from "../../data/Languages"
-
-interface HomePageProps {
-  language: Languages
-}
+import useLanguage from "../../hooks/useLanguage"
 
 /**
  * The starting page for the application.
  *
  * @returns {JSX.Element} - Starting page for the application. 
  */
-const HomePage = ({language}: HomePageProps): JSX.Element => {
+const HomePage = (): JSX.Element => {
+
+  const { language } = useLanguage()
 
   const swedishDescription = "Fullstack-utvecklare på svenska. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam ultricies sollicitudin. Praesent sem urna, tincidunt eu quam in, ullamcorper placerat diam. Morbi a felis nisl. Suspendisse potenti. Maecenas dapibus consectetur urna. Vivamus dictum viverra dignissim. Praesent vehicula tempor neque, in ultrices lectus finibus non. Quisque sit amet ullamcorper risus. Donec volutpat pretium auctor. Aenean ac tellus ipsum. Vestibulum in sodales ex. Etiam erat nulla, tempor id dapibus vitae, varius in nisi. Morbi non nibh rutrum, placerat erat vel, ornare nunc."
 
@@ -29,9 +28,9 @@ const HomePage = ({language}: HomePageProps): JSX.Element => {
         <Portrait />
       </section>
 
-      <AboutSection language={language}/>
-      <SkillsSection language={language}/>
-      <ProjectSection language={language}/>
+      <AboutSection />
+      <SkillsSection />
+      <ProjectSection />
 
 
       <Contact />
