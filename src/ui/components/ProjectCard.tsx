@@ -8,7 +8,7 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ title, stack, description, imgUrl, imgAlt }: ProjectCardProps) => {
   return (
-    <div className="flex flex-col items-center justify-center border-xl border border-light rounded max-w-60/100 min-w-50 ">
+    <div className="flex flex-col items-center justify-center border-xl border border-light rounded">
       <div className="p-5">
         <h2 className="text-xl">{title}</h2>
         <div className="py-2">
@@ -21,7 +21,7 @@ const ProjectCard = ({ title, stack, description, imgUrl, imgAlt }: ProjectCardP
         </div>
         <p>{description}</p>
       </div>
-      <img src={imgUrl} alt={imgAlt} className="object-cover" />
+      <img src={imgUrl} alt={imgAlt} className="max-h-100 w-full object-cover" />
     </div>
   )
 }
