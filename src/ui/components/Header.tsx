@@ -8,7 +8,7 @@ import NavBar from "./NavBar"
  */
 const Header = (): JSX.Element => {
   return (
-    <header className="flex justify-between items-baseline p-5 sticky w-full sm:max-w-90/100">
+    <header className="flex justify-between md:items-baseline p-5 sticky w-full">
       <h1 className="text-2xl">Alex Söderberg</h1>
       <div className="flex gap-10 sm:flex-row">
         <NavBar />
